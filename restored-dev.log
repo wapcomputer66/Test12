@@ -10,12 +10,8 @@
 > Ready on http://0.0.0.0:3000
 > Socket.IO server running at ws://0.0.0.0:3000/api/socketio
  ○ Compiling / ...
- ✓ Compiled / in 5.3s (798 modules)
- GET / 200 in 5381ms
- GET / 200 in 5804ms
- GET / 200 in 47ms
- GET / 200 in 40ms
- GET / 200 in 97ms
- ✓ Compiled /_not-found in 392ms (770 modules)
- GET /api/projects?userId=cmgz9e44a0000sz3r4o92ytdf 404 in 607ms
- GET /api/payments?userId=cmgz9e44a0000sz3r4o92ytdf 404 in 604ms
+ ✓ Compiled / in 9.6s (2003 modules)
+ GET / 200 in 10991ms
+ ○ Compiling /share/[token] ...
+ ✓ Compiled /share/[token] in 2.4s (1994 modules)
+ GET /share/99c9c683f7df5cec7c922852bae8e736 200 in 3431ms
