@@ -1,0 +1,21 @@
+
+> nextjs_tailwind_shadcn_ts@0.1.0 dev
+> nodemon --exec "npx tsx server.ts" --watch server.ts --watch src --ext ts,tsx,js,jsx 2>&1 | tee dev.log
+
+[33m[nodemon] 3.1.11[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): server.ts src/**/*[39m
+[33m[nodemon] watching extensions: ts,tsx,js,jsx[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+> Ready on http://0.0.0.0:3000
+> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
+ ○ Compiling / ...
+ ✓ Compiled / in 5.3s (798 modules)
+ GET / 200 in 5381ms
+ GET / 200 in 5804ms
+ GET / 200 in 47ms
+ GET / 200 in 40ms
+ GET / 200 in 97ms
+ ✓ Compiled /_not-found in 392ms (770 modules)
+ GET /api/projects?userId=cmgz9e44a0000sz3r4o92ytdf 404 in 607ms
+ GET /api/payments?userId=cmgz9e44a0000sz3r4o92ytdf 404 in 604ms
