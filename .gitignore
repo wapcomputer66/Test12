@@ -23,6 +23,19 @@
 # misc
 .DS_Store
 *.pem
+Thumbs.db
+*.swp
+*.swo
+*~
+*.tmp
+*.bak
+*.old
+*.backup
+*.orig
+*.rej
+~$*.doc*
+~$*.xls*
+~$*.ppt*
 
 # debug
 npm-debug.log*
