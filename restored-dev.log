@@ -15,3 +15,39 @@
  ○ Compiling /share/[token] ...
  ✓ Compiled /share/[token] in 2.4s (1994 modules)
  GET /share/99c9c683f7df5cec7c922852bae8e736 200 in 3431ms
+ ✓ Compiled /api/share/[token] in 286ms (1046 modules)
+ ✓ Compiled in 236ms (965 modules)
+ GET /favicon.ico 200 in 796ms
+Failed to access shared project: TypeError: Cannot read properties of undefined (reading 'findUnique')
+    at GET (src/app/api/share/[token]/route.ts:12:37)
+  10 |
+  11 |     // Find project by share token
+> 12 |     const project = await db.project.findUnique({
+     |                                     ^
+  13 |       where: { 
+  14 |         shareToken: token,
+  15 |         isShared: true 
+ GET /api/share/99c9c683f7df5cec7c922852bae8e736 500 in 1724ms
+Failed to verify password: TypeError: Cannot read properties of undefined (reading 'findUnique')
+    at POST (src/app/api/share/[token]/route.ts:91:37)
+  89 |
+  90 |     // Find project by share token
+> 91 |     const project = await db.project.findUnique({
+     |                                     ^
+  92 |       where: { 
+  93 |         shareToken: token,
+  94 |         isShared: true 
+ POST /api/share/99c9c683f7df5cec7c922852bae8e736 500 in 926ms
+ GET /share/99c9c683f7df5cec7c922852bae8e736 200 in 183ms
+ GET /favicon.ico 200 in 8ms
+Failed to access shared project: TypeError: Cannot read properties of undefined (reading 'findUnique')
+    at GET (src/app/api/share/[token]/route.ts:12:37)
+  10 |
+  11 |     // Find project by share token
+> 12 |     const project = await db.project.findUnique({
+     |                                     ^
+  13 |       where: { 
+  14 |         shareToken: token,
+  15 |         isShared: true 
+ GET /api/share/99c9c683f7df5cec7c922852bae8e736 500 in 68ms
+ GET / 200 in 351ms
