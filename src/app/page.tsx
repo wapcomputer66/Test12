@@ -3066,9 +3066,9 @@ export default function Home() {
 
                 {/* Records Table */}
                 <div className="overflow-x-auto">
-                  <table className="w-full border-collapse border border-gray-300">
+                  <table className="w-full border-collapse border border-gray-300 bg-gradient-to-br from-green-50/60 via-emerald-50/70 to-green-50/60 backdrop-blur-sm">
                     <thead>
-                      <tr className="bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold">
+                      <tr className="bg-gradient-to-r from-orange-500 via-orange-550 to-orange-600 text-white font-bold shadow-lg">
                         <th className="border border-gray-300 p-2">क्र.</th>
                         <th className="border border-gray-300 p-2">रैयत नाम</th>
                         <th className="border border-gray-300 p-2">जमाबंदी नंबर</th>
@@ -3087,7 +3087,9 @@ export default function Home() {
                       {currentProject?.landRecords
                         .filter(record => !currentRaiyatFilter || record.raiyatName === currentRaiyatFilter)
                         .map((record, index) => (
-                        <tr key={record.id} className="hover:bg-gray-50">
+                        <tr key={record.id} className={`hover:bg-gray-50 transition-colors ${
+                          index % 2 === 0 ? 'bg-white' : 'bg-gradient-to-r from-green-50/40 via-emerald-50/30 to-green-50/40'
+                        }`}>
                           <td className="border border-gray-300 p-2">{index + 1}</td>
                           <td className="border border-gray-300 p-2 font-semibold">
                             <span 
@@ -3376,20 +3378,22 @@ export default function Home() {
                       <h3 className="text-lg font-semibold text-gray-700 text-center">प्रोजेक्ट वार पेमेंट डिटेल्स</h3>
                       {payments.length > 0 ? (
                         <div className="overflow-x-auto rounded-lg border border-gray-200 shadow-sm">
-                          <table className="w-full border-collapse bg-white">
+                          <table className="w-full border-collapse bg-gradient-to-br from-blue-50/60 via-indigo-50/70 to-blue-50/60 backdrop-blur-sm rounded-lg">
                             <thead>
-                              <tr className="bg-gradient-to-r from-gray-50 to-gray-100 border-b border-gray-200">
-                                <th className="border border-gray-200 p-3 text-left font-semibold text-gray-700">प्रोजेक्ट</th>
-                                <th className="border border-gray-200 p-3 text-right font-semibold text-gray-700">कुल राशि</th>
-                                <th className="border border-gray-200 p-3 text-right font-semibold text-gray-700">प्राप्त राशि</th>
-                                <th className="border border-gray-200 p-3 text-right font-semibold text-gray-700">बकाया राशि</th>
-                                <th className="border border-gray-200 p-3 text-center font-semibold text-gray-700">स्टेटस</th>
-                                <th className="border border-gray-200 p-3 text-center font-semibold text-gray-700">कार्य</th>
+                              <tr className="bg-gradient-to-r from-blue-500 via-blue-550 to-blue-600 text-white font-bold shadow-lg">
+                                <th className="border border-gray-200 p-3 text-left font-semibold text-white">प्रोजेक्ट</th>
+                                <th className="border border-gray-200 p-3 text-right font-semibold text-white">कुल राशि</th>
+                                <th className="border border-gray-200 p-3 text-right font-semibold text-white">प्राप्त राशि</th>
+                                <th className="border border-gray-200 p-3 text-right font-semibold text-white">बकाया राशि</th>
+                                <th className="border border-gray-200 p-3 text-center font-semibold text-white">स्टेटस</th>
+                                <th className="border border-gray-200 p-3 text-center font-semibold text-white">कार्य</th>
                               </tr>
                             </thead>
                             <tbody>
                               {payments.map((payment, index) => (
-                                <tr key={payment.id} className={`hover:bg-blue-50 transition-colors ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+                                <tr key={payment.id} className={`hover:bg-blue-50 transition-colors ${
+                                  index % 2 === 0 ? 'bg-white' : 'bg-gradient-to-r from-blue-50/40 via-indigo-50/30 to-blue-50/40'
+                                }`}>
                                   <td className="border border-gray-200 p-3 font-medium text-gray-900">{payment.project?.name || 'Unknown Project'}</td>
                                   <td className="border border-gray-200 p-3 text-right font-semibold text-gray-900">₹{payment.totalAmount.toLocaleString('hi-IN')}</td>
                                   <td className="border border-gray-200 p-3 text-right font-medium text-green-600">₹{payment.receivedAmount.toLocaleString('hi-IN')}</td>

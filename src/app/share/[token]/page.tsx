@@ -399,7 +399,7 @@ export default function ShareView() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {/* Raiyat Filter */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-white mb-2">
                       रैयत के अनुसार फ़िल्टर करें
                     </label>
                     <select
@@ -418,7 +418,7 @@ export default function ShareView() {
                   
                   {/* Search Filter */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-white mb-2">
                       खोजें (खेसरा, खाता, जमाबंदी, टिप्पणी)
                     </label>
                     <input
@@ -472,24 +472,26 @@ export default function ShareView() {
               </CardHeader>
               <CardContent>
                 <div className="overflow-x-auto">
-                  <table className="w-full min-w-[1000px] text-sm">
+                  <table className="w-full min-w-[1000px] text-sm bg-gradient-to-br from-green-50/60 via-emerald-50/70 to-green-50/60 backdrop-blur-sm rounded-lg">
                     <thead>
-                      <tr className="border-b bg-gray-50">
-                        <th className="text-left p-3 font-semibold text-gray-700 min-w-[100px]">रैयत</th>
-                        <th className="text-left p-3 font-semibold text-gray-700 min-w-[80px]">खेसरा</th>
-                        <th className="text-left p-3 font-semibold text-gray-700 min-w-[80px]">खाता</th>
-                        <th className="text-left p-3 font-semibold text-gray-700 min-w-[80px]">जमाबंदी</th>
-                        <th className="text-left p-3 font-semibold text-gray-700 min-w-[80px]">रकवा</th>
-                        <th className="text-left p-3 font-semibold text-gray-700 min-w-[100px]">उत्तर</th>
-                        <th className="text-left p-3 font-semibold text-gray-700 min-w-[100px]">दक्षिण</th>
-                        <th className="text-left p-3 font-semibold text-gray-700 min-w-[100px]">पूर्ब</th>
-                        <th className="text-left p-3 font-semibold text-gray-700 min-w-[100px]">पश्चिम</th>
-                        <th className="text-left p-3 font-semibold text-gray-700 min-w-[120px]">टिप्पणी</th>
+                      <tr className="border-b bg-gradient-to-r from-green-500 via-green-550 to-green-600 text-white font-bold shadow-lg">
+                        <th className="text-left p-3 font-semibold text-white min-w-[100px]">रैयत</th>
+                        <th className="text-left p-3 font-semibold text-white min-w-[80px]">खेसरा</th>
+                        <th className="text-left p-3 font-semibold text-white min-w-[80px]">खाता</th>
+                        <th className="text-left p-3 font-semibold text-white min-w-[80px]">जमाबंदी</th>
+                        <th className="text-left p-3 font-semibold text-white min-w-[80px]">रकवा</th>
+                        <th className="text-left p-3 font-semibold text-white min-w-[100px]">उत्तर</th>
+                        <th className="text-left p-3 font-semibold text-white min-w-[100px]">दक्षिण</th>
+                        <th className="text-left p-3 font-semibold text-white min-w-[100px]">पूर्ब</th>
+                        <th className="text-left p-3 font-semibold text-white min-w-[100px]">पश्चिम</th>
+                        <th className="text-left p-3 font-semibold text-white min-w-[120px]">टिप्पणी</th>
                       </tr>
                     </thead>
                     <tbody>
                       {getFilteredRecords().map((record, index) => (
-                        <tr key={record.id} className={`border-b hover:bg-gray-50 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`}>
+                        <tr key={record.id} className={`border-b hover:bg-gray-50 transition-colors ${
+                          index % 2 === 0 ? 'bg-white' : 'bg-gradient-to-r from-green-50/40 via-emerald-50/30 to-green-50/40'
+                        }`}>
                           <td className="p-3">
                             <div className="flex items-center space-x-3">
                               <div 
@@ -505,14 +507,14 @@ export default function ShareView() {
                             </div>
                           </td>
                           <td className="p-3 font-medium text-gray-900">{record.khesraNumber}</td>
-                          <td className="p-3 text-gray-700">{record.khataNumber || '-'}</td>
-                          <td className="p-3 text-gray-700">{record.jamabandiNumber || '-'}</td>
-                          <td className="p-3 text-gray-700">{record.rakwa || '-'}</td>
-                          <td className="p-3 text-gray-700">{record.uttar || '-'}</td>
-                          <td className="p-3 text-gray-700">{record.dakshin || '-'}</td>
-                          <td className="p-3 text-gray-700">{record.purab || '-'}</td>
-                          <td className="p-3 text-gray-700">{record.paschim || '-'}</td>
-                          <td className="p-3 text-gray-700">{record.remarks || '-'}</td>
+                          <td className="p-3 text-white">{record.khataNumber || '-'}</td>
+                          <td className="p-3 text-white">{record.jamabandiNumber || '-'}</td>
+                          <td className="p-3 text-white">{record.rakwa || '-'}</td>
+                          <td className="p-3 text-white">{record.uttar || '-'}</td>
+                          <td className="p-3 text-white">{record.dakshin || '-'}</td>
+                          <td className="p-3 text-white">{record.purab || '-'}</td>
+                          <td className="p-3 text-white">{record.paschim || '-'}</td>
+                          <td className="p-3 text-white">{record.remarks || '-'}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -619,7 +621,7 @@ export default function ShareView() {
                   {/* Progress Bar */}
                   <div className="space-y-4">
                     <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium text-gray-700">भुगतान प्रगति</span>
+                      <span className="text-sm font-medium text-white">भुगतान प्रगति</span>
                       <span className="text-sm font-bold text-gray-900">
                         {overviewData.paymentSummary.totalAmount > 0 
                           ? Math.round((overviewData.paymentSummary.receivedAmount / overviewData.paymentSummary.totalAmount) * 100)
@@ -698,7 +700,7 @@ export default function ShareView() {
                                   <div className="absolute inset-0 bg-white opacity-20 animate-pulse"></div>
                                 </div>
                               </div>
-                              <span className="text-sm font-bold text-gray-700 min-w-[3rem] text-right bg-white px-2 py-1 rounded border">
+                              <span className="text-sm font-bold text-white min-w-[3rem] text-right bg-white px-2 py-1 rounded border">
                                 {Math.round((raiyat.recordCount / overviewData.statistics.totalRecords) * 100)}%
                               </span>
                             </div>
